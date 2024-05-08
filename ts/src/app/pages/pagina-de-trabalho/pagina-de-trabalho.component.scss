@@ -1,14 +1,65 @@
+main {
+  width: 80vw;
+}
+
 #trabalho {
   display: flex;
 
   & header {
+    width: 80vw;
+
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--corTerciaria);
+
+    padding: 0.5vh var(--paddingHorizontal);
+
+    position: absolute;
+
+    & > div:first-of-type {
+      color: var(--corTextoCabecalho);
+    }
 
     & > div:nth-child(3) {
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1vw;
+
+      color: var(--corInfoUsuario);
+
+      & > div:nth-child(2) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
     }
+
     & img {
-      width: 4vw;
+      width: 2.5vw;
+
+      border-radius: 50%;
+
+      position: relative;
+    }
+
+    #quantidadeNotificacao {
+      position: relative;
+
+      right: 0.6vw;
+      top: -1vw;
+
+      text-align: center;
+      font-size: 80%;
+      font-weight: bold;
+
+      background-color: var(--corNotificacao);
+      color: white;
+
+      width: 1rem;
+      border-radius: 50%;
     }
   }
 }
