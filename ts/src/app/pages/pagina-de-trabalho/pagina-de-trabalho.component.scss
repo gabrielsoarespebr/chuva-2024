@@ -20,6 +20,15 @@ main {
 
     & > div:first-of-type {
       color: var(--corTextoCabecalho);
+
+      & > p:nth-child(2) {
+        font-size: 120%;
+      }
+
+      & > p:first-of-type,
+      > p:nth-child(3) {
+        font-size: 90%;
+      }
     }
 
     & > div:nth-child(3) {
@@ -29,6 +38,17 @@ main {
       gap: 1vw;
 
       color: var(--corInfoUsuario);
+
+      font-family: var(--fonteSecundaria);
+      font-weight: 500;
+
+      & > div:first-of-type {
+        text-align: end;
+
+        & > p:nth-child(2) {
+          font-size: 85%;
+        }
+      }
 
       & > div:nth-child(2) {
         display: flex;
