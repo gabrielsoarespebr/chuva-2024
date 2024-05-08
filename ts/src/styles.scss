@@ -23,11 +23,11 @@
 
   --corTextoCabecalho: #725c5c;
   --corInfoUsuario: #333333;
-  --corNotificacao: #F85959;
+  --corNotificacao: #f85959;
   --corTituloSessao: #4e4e4e;
   --corTexto: #4d4d4d;
-  --corReferencia: #ada0a0;
   --corAutor: #5c5c5c;
+  --corReferencia: #ada0a0;
 
   --corBorda: #e7e7e7;
   --corSombra: #c3c3c3;
@@ -41,4 +41,18 @@ body {
 
 .fonteSecundaria {
   font-family: var(--fonteSecundaria);
+}
+
+.listaSemEstilo {
+  list-style: none;
+}
+
+.flex{
+  display: flex;
+}
+
+.flexCompleto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

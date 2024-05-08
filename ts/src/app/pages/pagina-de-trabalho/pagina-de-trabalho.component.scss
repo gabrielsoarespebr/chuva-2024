@@ -95,7 +95,7 @@ main {
 #principalInfoEsquerda {
   width: 70%;
 
-  & > h2{
+  & > h2 {
     font-size: 120%;
 
     margin-bottom: 2vh;
@@ -104,4 +104,44 @@ main {
 
 #principalInfoDireita {
   width: 30%;
+
+  & > ul {
+    gap: .5rem;
+  }
+}
+
+.botao {
+  cursor: pointer;
+
+  background-color: var(--corPrincipal);
+
+  padding: 0.7vh 1vw 3vh 1vw;
+  border: none;
+  border-radius: 0.3rem;
+
+  color: white;
+  box-shadow: 2px 2px 2px #ececec;
+
+  font-weight: bold;
+
+  height: 3vh;
+
+  & svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  &:not(#botaoDoi) {
+    padding: 0.9vh 1vw 2.7vh 1vw;
+  }
+
+  &:hover{
+    background-color: var(--corSecundaria);
+  }
+}
+
+
+#botaoDownload{
+  display: flex;
+  gap: .5rem;
 }

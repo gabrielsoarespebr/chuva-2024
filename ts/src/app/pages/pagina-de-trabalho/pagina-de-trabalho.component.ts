@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pagina-de-trabalho.component.scss']
 })
 export class PaginaDeTrabalhoComponent implements OnInit {
+  favoritado: boolean = false;
 
   constructor() { }
 
