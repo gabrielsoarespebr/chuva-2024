@@ -82,4 +82,26 @@ main {
       border-radius: 50%;
     }
   }
+
+  & section:first-of-type {
+    margin-top: 5vh;
+    padding: var(--paddingHorizontal);
+
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+#principalInfoEsquerda {
+  width: 70%;
+
+  & > h2{
+    font-size: 120%;
+
+    margin-bottom: 2vh;
+  }
+}
+
+#principalInfoDireita {
+  width: 30%;
 }
