@@ -4,7 +4,7 @@
 
   background-color: white;
 
-  filter: drop-shadow(2px 0px 3px rgb(195, 195, 195));
+  filter: drop-shadow(2px 0px 3px var(--corSombra));
 
   & *{
     filter: drop-shadow(1px 1px 1px transparent);
@@ -17,7 +17,7 @@
   & > div {
     height: 7vh;
 
-    background: linear-gradient(#ffb153, #ee7b3b);
+    background: linear-gradient(var(--corSecundaria), var(--corPrincipal));
     color: white;
 
     display: flex;
@@ -31,7 +31,7 @@
   }
 
   & li {
-    border-bottom: .2rem solid #E7E7E7;
+    border-bottom: .2rem solid var(--corBorda);
 
     &> a {
     text-decoration: none;
@@ -45,13 +45,13 @@
 }
 
 .itemAtivado {
-  background-color: #fdf1eb;
+  background-color: var(--corTerciaria);
 
   display: flex;
 }
 
 .itemAtivado:before {
-  background: linear-gradient(#ffb153, #ee7b3b);
+  background: linear-gradient(var(--corSecundaria), var(--corPrincipal));
   content: "\00a0";
 }
 
