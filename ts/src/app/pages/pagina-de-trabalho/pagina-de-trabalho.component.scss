@@ -1,0 +1,14 @@
+#trabalho {
+  display: flex;
+
+  & header {
+    display: flex;
+
+    & > div:nth-child(3) {
+      display: flex;
+    }
+    & img {
+      width: 4vw;
+    }
+  }
+}
