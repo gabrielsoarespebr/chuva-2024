@@ -145,7 +145,9 @@
     <section id="discussoes">
       <p>Discussões</p>
       <div>
-        <p>Compartilhe suas ideias ou dúvidas com os autores!</p>
+        <p class="textoCorPrincipal negrito">
+          Compartilhe suas ideias ou dúvidas com os autores!
+        </p>
         <ul class="listaSemEstilo flex">
           <li>
             <img src="/assets/icon/iconeDiscussoes1.svg" alt="Icone 1" />
@@ -162,17 +164,42 @@
           a curiosidade? Deixe seus questionamentos ou sugestões para o autor!
         </p>
       </div>
-      <button class="btn-create-topic">+ criar tópico</button>
+      <button class="btn-create-topic flexCompleto">
+        <i class="fa-solid fa-plus"></i>criar tópico
+      </button>
       <div>
         <ul class="listaSemEstilo">
           <li class="answered-topic">
-            <p class="ops-topic-subject">Assunto da pergunta</p>
-            <p>Autor da pergunta</p>
+            <p class="ops-topic-subject textoCorPrincipal negrito">
+              Assunto da pergunta
+            </p>
+            <p class="negrito">Autor da pergunta</p>
             <p>
               Comecinho da pergunta aparece aqui resente relato inscreve-se no
               campo da análise da dimensão e impacto de processo formativo
               situado impacto de processo formativo processo...
             </p>
+            <div>
+              <i class="fa-solid fa-ellipsis-vertical textoCorPrincipal"></i>
+
+              <button class="botao" (click)="atualizaCurtida()">
+                <i
+                  class="fa-solid fa-heart"
+                  *ngIf="curtido; else naoCurtido"
+                ></i>
+              </button>
+
+              <ng-template #naoCurtido>
+                <i class="fa-regular fa-heart"></i>
+              </ng-template>
+
+              <p>
+                {{ curtidaQuantidade }}
+                {{ curtidaQuantidade > 1 ? "likes" : "like" }}
+              </p>
+
+              <p>1 resposta</p>
+            </div>
           </li>
         </ul>
       </div>
