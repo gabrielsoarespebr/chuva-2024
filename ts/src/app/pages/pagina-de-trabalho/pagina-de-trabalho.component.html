@@ -122,5 +122,25 @@
         </div>
       </div>
     </section>
+    <section id="resumo">
+      <p>Resumo</p>
+      <div>
+        <p>
+          {{ textoResumoExpandido ? textoResumo : textoResumo.slice(0, 450) }}
+          <span *ngIf="!textoResumoExpandido">...</span>
+
+          <button
+            class="btn-show-more"
+            (click)="textoResumoExpandido = true"
+            *ngIf="!textoResumoExpandido; else verMenos"
+          >
+            ver mais
+          </button>
+          <ng-template #verMenos>
+            <button (click)="textoResumoExpandido = false">ver menos</button>
+          </ng-template>
+        </p>
+      </div>
+    </section>
   </main>
 </div>
