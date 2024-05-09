@@ -26,7 +26,7 @@
   --corNotificacao: #f85959;
   --corTituloSessao: #4e4e4e;
   --corTexto: #4d4d4d;
-  --corAutor: #5c5c5c;
+  --corDetalhes: #5c5c5c;
   --corReferencia: #ada0a0;
 
   --corBorda: #e7e7e7;
@@ -47,12 +47,24 @@ body {
   list-style: none;
 }
 
-.flex{
+.flex {
   display: flex;
 }
 
-.flexCompleto{
+.flexCompleto {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.textoCorPrincipal {
+  color: var(--corPrincipal);
+}
+
+.textoMaiusculo {
+  text-transform: uppercase;
+}
+
+.negrito{
+  font-weight: bold;
 }

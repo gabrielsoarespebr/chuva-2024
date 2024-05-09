@@ -105,8 +105,15 @@ main {
 #principalInfoDireita {
   width: 30%;
 
+  & > p {
+    text-align: center;
+    font-weight: 500;
+
+    margin: 1vh auto;
+  }
+
   & > ul {
-    gap: .5rem;
+    gap: 0.5rem;
   }
 }
 
@@ -135,13 +142,41 @@ main {
     padding: 0.9vh 1vw 2.7vh 1vw;
   }
 
-  &:hover{
+  &:hover {
     background-color: var(--corSecundaria);
   }
 }
 
-
-#botaoDownload{
+#botaoDownload {
   display: flex;
-  gap: .5rem;
+  gap: 0.5rem;
+}
+
+#detalhes {
+  border: 1px solid var(--corBorda);
+
+  color: var(--corDetalhes);
+
+  & > p {
+    background-color: var(--corTerciaria);
+    border-bottom: 1px solid var(--corBorda);
+    padding: 1.2vh;
+
+    font-size: 120%;
+    font-weight: 500;
+  }
+
+  & > div {
+    font-family: var(--fonteSecundaria);
+
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+
+    padding: 1.2vh;
+  }
+}
+
+#referencia {
+  color: var(--corReferencia);
 }
