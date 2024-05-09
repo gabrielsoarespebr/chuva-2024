@@ -130,7 +130,7 @@ main {
 
   padding: 0.7vh 1vw 3vh 1vw;
   border: none;
-  border-radius: 0.3rem;
+  border-radius: var(--bordaArredondada);
 
   color: white;
   box-shadow: 2px 2px 2px #ececec;
