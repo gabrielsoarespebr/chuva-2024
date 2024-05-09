@@ -159,7 +159,8 @@ main {
 }
 
 #detalhes,
-#resumo {
+#resumo,
+#discussoes {
   border: 1px solid var(--corBorda);
 
   color: var(--corDetalhes);
@@ -197,10 +198,14 @@ main {
 
     font-weight: bold;
 
-    padding-left: .3rem;
+    padding-left: 0.3rem;
   }
 }
 
 #referencia {
   color: var(--corReferencia);
+}
+
+#discussoes {
+  margin: 0 var(--paddingHorizontal);
 }
