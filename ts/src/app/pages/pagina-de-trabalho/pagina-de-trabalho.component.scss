@@ -186,6 +186,19 @@ main {
 
 #resumo {
   margin: 0 var(--paddingHorizontal);
+
+  & button {
+    cursor: pointer;
+
+    background-color: transparent;
+    color: var(--corPrincipal);
+
+    border: none;
+
+    font-weight: bold;
+
+    padding-left: .3rem;
+  }
 }
 
 #referencia {
