@@ -93,6 +93,24 @@ main {
   }
 }
 
+@media (max-width: 1250px) {
+  #trabalho section:first-of-type {
+    margin-top: 8vh;
+  }
+}
+
+@media (max-width: 1020px) {
+  #trabalho section:first-of-type {
+    margin-top: 11vh;
+  }
+}
+
+@media (max-width: 880px) {
+  #trabalho section:first-of-type {
+    margin-top: 15vh;
+  }
+}
+
 #iconeGlobo {
   padding-left: 0.4rem;
   padding-top: 0.3rem;
