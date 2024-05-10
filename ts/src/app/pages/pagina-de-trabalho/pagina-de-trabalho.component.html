@@ -144,7 +144,7 @@
     </section>
     <section id="discussoes">
       <p>Discussões</p>
-      <div *ngIf="(statusTopico == 0); else discussao" id="recepcionaDiscussao">
+      <div *ngIf="statusTopico == 0; else discussao" id="recepcionaDiscussao">
         <div>
           <p class="textoCorPrincipal negrito">
             Compartilhe suas ideias ou dúvidas com os autores!
@@ -185,6 +185,7 @@
               >Assunto</label
             >
             <input
+              class="subject"
               id="discussaoAssunto"
               name="discussaoAssunto"
               type="text"
