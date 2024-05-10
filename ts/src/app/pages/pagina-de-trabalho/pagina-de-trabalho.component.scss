@@ -208,7 +208,9 @@ main {
 
 #discussoes {
   margin: 0 var(--paddingHorizontal);
+}
 
+#recepcionaDiscussao {
   & > div:first-of-type {
     display: flex;
     flex-direction: column;
@@ -256,6 +258,8 @@ main {
 
 .answered-topic {
   box-shadow: 0 0 10px var(--corSombra);
+
+  margin-top: 2vh;
   padding: 2vh;
 
   border-radius: var(--bordaArredondada);
@@ -315,7 +319,7 @@ footer {
   & > div:last-of-type {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     gap: 2vh;
   }
 }
@@ -344,4 +348,49 @@ footer {
       opacity: 0.8;
     }
   }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  & textarea {
+    resize: none;
+  }
+
+  & div:last-of-type {
+    display: flex;
+    justify-content: flex-end;
+
+    background-color: #eaf1f2;
+
+    border: 1px solid var(--corBorda);
+    border-radius: 0 0 var(--bordaArredondada) var(--bordaArredondada);
+  }
+}
+
+#discussaoAssunto,
+#discussaoConteudo {
+  border-radius: var(--bordaArredondada);
+  border: 1px solid var(--corBorda);
+
+  outline: none;
+
+  margin-top: 0.5vh;
+
+  padding: 1vw;
+}
+
+#discussaoAssunto {
+  border-radius: var(--bordaArredondada);
+
+  margin-bottom: 2vh;
+}
+
+#discussaoConteudo {
+  border-radius: var(--bordaArredondada) var(--bordaArredondada) 0 0;
+}
+
+#botaoEnviar {
+  border-radius: 0 0 var(--bordaArredondada) 0;
 }

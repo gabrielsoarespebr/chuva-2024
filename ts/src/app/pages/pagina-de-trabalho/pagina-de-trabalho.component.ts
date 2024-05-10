@@ -24,6 +24,15 @@ export class PaginaDeTrabalhoComponent implements OnInit {
     else this.curtidaQuantidade -= 1;
   }
 
+  // 0 = Discussão não iniciada
+  // 1 = Escrevendo Discussão
+  // 2 = Discussão enviada
+  statusTopico: number = 0;
+
+  iniciarDiscussao() {
+    this.statusTopico = 1;
+  }
+
   constructor() {}
 
   ngOnInit(): void {}

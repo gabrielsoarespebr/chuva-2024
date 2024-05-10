@@ -144,29 +144,72 @@
     </section>
     <section id="discussoes">
       <p>Discussões</p>
-      <div>
-        <p class="textoCorPrincipal negrito">
-          Compartilhe suas ideias ou dúvidas com os autores!
-        </p>
-        <ul class="listaSemEstilo flex">
-          <li>
-            <img src="/assets/icon/iconeDiscussoes1.svg" alt="Icone 1" />
-          </li>
-          <li>
-            <img src="/assets/icon/iconeDiscussoes2.svg" alt="Icone 2" />
-          </li>
-          <li>
-            <img src="/assets/icon/iconeDiscussoes3.svg" alt="Icone 3" />
-          </li>
-        </ul>
-        <p>
-          Sabia que o maior estímulo no desenvolvimento científico e cultural é
-          a curiosidade? Deixe seus questionamentos ou sugestões para o autor!
-        </p>
+      <div *ngIf="(statusTopico == 0); else discussao" id="recepcionaDiscussao">
+        <div>
+          <p class="textoCorPrincipal negrito">
+            Compartilhe suas ideias ou dúvidas com os autores!
+          </p>
+          <ul class="listaSemEstilo flex">
+            <li>
+              <img src="/assets/icon/iconeDiscussoes1.svg" alt="Icone 1" />
+            </li>
+            <li>
+              <img src="/assets/icon/iconeDiscussoes2.svg" alt="Icone 2" />
+            </li>
+            <li>
+              <img src="/assets/icon/iconeDiscussoes3.svg" alt="Icone 3" />
+            </li>
+          </ul>
+          <p>
+            Sabia que o maior estímulo no desenvolvimento científico e cultural
+            é a curiosidade? Deixe seus questionamentos ou sugestões para o
+            autor!
+          </p>
+        </div>
+        <button
+          class="btn-create-topic flexCompleto"
+          (click)="iniciarDiscussao()"
+        >
+          <i class="fa-solid fa-plus"></i>criar tópico
+        </button>
       </div>
-      <button class="btn-create-topic flexCompleto">
-        <i class="fa-solid fa-plus"></i>criar tópico
-      </button>
+
+      <ng-template #discussao>
+        <div>
+          <p class="textoCetralizado">
+            Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!
+          </p>
+
+          <form id="formulario">
+            <label for="discussaoAssunto" class="textoCorPrincipal negrito"
+              >Assunto</label
+            >
+            <input
+              id="discussaoAssunto"
+              name="discussaoAssunto"
+              type="text"
+              placeholder="Defina um tópico sucinto para notificar os autores..."
+              required
+            />
+            <label for="discussaoConteudo" class="textoCorPrincipal negrito"
+              >Conteúdo</label
+            >
+            <textarea
+              id="discussaoConteudo"
+              name="discussaoConteudo"
+              rows="4"
+              required
+            ></textarea>
+
+            <div>
+              <button class="botao" id="botaoEnviar">Enviar</button>
+            </div>
+          </form>
+        </div>
+
+        <hr />
+      </ng-template>
+
       <div>
         <ul class="listaSemEstilo">
           <li class="answered-topic">
