@@ -275,9 +275,12 @@ main {
   box-shadow: 0 0 10px var(--corSombra);
 
   margin-top: 2vh;
-  padding: 2vh;
 
   border-radius: var(--bordaArredondada);
+
+  & > div:first-of-type {
+    padding: 2vh;
+  }
 
   & > p:nth-child(2) {
     font-size: 80%;
@@ -291,6 +294,14 @@ main {
 
     color: var(--corTexto);
   }
+}
+
+.comentarioAcoes {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+
+  margin-top: 1vh;
 
   & .botao {
     padding: 0.2vh 0.6vw !important;
@@ -313,11 +324,37 @@ main {
   }
 }
 
+.comentario {
+  border: 1px solid var(--corBorda);
+
+  padding: 1vh 1.5vw 2vh 1.5vw;
+
+  & > div:first-of-type {
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: 1vh;
+
+    & > div {
+      display: flex;
+      gap: 2vw;
+    }
+  }
+}
+
+.colaborouTrabalho{
+  background-color: #f5f5f5;
+}
+
 #aguardandoFeedbackDiscussao {
   margin: 0;
+  padding: 2vh;
+
+  background-color: #f5f5f5;
 
   & > * {
     filter: blur(2px);
+    opacity: 0.7;
   }
 }
 
