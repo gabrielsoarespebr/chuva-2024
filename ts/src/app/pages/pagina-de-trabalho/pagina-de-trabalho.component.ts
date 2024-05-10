@@ -27,10 +27,14 @@ export class PaginaDeTrabalhoComponent implements OnInit {
   // 0 = Discussão não iniciada
   // 1 = Escrevendo Discussão
   // 2 = Discussão enviada
-  statusTopico: number = 0;
+  statusTopico: number = 2;
 
-  iniciarDiscussao() {
-    this.statusTopico = 1;
+  atualizaDiscussao(evento: MouseEvent) {
+    evento.preventDefault();
+
+    if (this.statusTopico == 0) this.statusTopico = 1;
+    else if (this.statusTopico == 1) this.statusTopico = 2;
+    else if (this.statusTopico == 2) this.statusTopico = 1;
   }
 
   constructor() {}

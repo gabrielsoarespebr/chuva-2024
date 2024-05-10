@@ -229,6 +229,20 @@ main {
   }
 }
 
+#enviaDiscussao > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+
+  margin-bottom: 3vh;
+
+  &>p:last-of-type{
+    width: 70%;
+
+    margin: auto;
+  }
+}
+
 #resumo,
 #discussoes {
   margin-bottom: 3vh;
