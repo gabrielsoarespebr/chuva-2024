@@ -277,7 +277,7 @@ main {
     padding: 0.2vh 0.6vw !important;
   }
 
-  & > div>i:first-of-type {
+  & > div > i:first-of-type {
     cursor: pointer;
   }
 
@@ -290,6 +290,58 @@ main {
 
     & > p {
       color: var(--corReferencia);
+    }
+  }
+}
+
+hr {
+  width: 90%;
+
+  margin: auto;
+
+  border: 0;
+  border-top: 1px solid var(--corBorda);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 3vw;
+
+  padding: 2vh var(--paddingHorizontal);
+
+  color: var(--corDetalhes);
+
+  & > div:last-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 2vh;
+  }
+}
+
+#galoaLogo {
+  width: 30vw;
+
+  & a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #71478e;
+    color: white;
+
+    border-radius: var(--bordaArredondada);
+
+    font-family: var(--fonteSecundaria);
+    font-weight: 500;
+    text-decoration: none;
+
+    padding: 0.5vh;
+
+    &:hover {
+      opacity: 0.8;
     }
   }
 }
