@@ -342,7 +342,7 @@ main {
   }
 }
 
-.colaborouTrabalho{
+.colaborouTrabalho {
   background-color: #f5f5f5;
 }
 
@@ -438,14 +438,21 @@ form {
     resize: none;
   }
 
-  & div:last-of-type {
-    display: flex;
-    justify-content: flex-end;
-
+  & #barraCinza {
     background-color: #eaf1f2;
+
+    height: 3.7vh;
+    width: 100%;
 
     border: 1px solid var(--corBorda);
     border-radius: 0 0 var(--bordaArredondada) var(--bordaArredondada);
+  }
+
+  & button {
+    width: 20vw;
+    align-self: flex-end;
+
+    margin-top: -3.7vh;
   }
 }
 
