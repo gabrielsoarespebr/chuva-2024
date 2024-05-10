@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-pagina-de-trabalho',
@@ -29,12 +29,22 @@ export class PaginaDeTrabalhoComponent implements OnInit {
   // 2 = Discussão enviada
   statusTopico: number = 2;
 
+  usuarioEmail: string = 'gabrielsoares.pe.br@gmail.com';
+  discussaoAssuntoTemp: string = '';
+  discussaoConteudoTemp: string = '';
+  discussaoAssunto: string = 'gabriel';
+  discussaoConteudo: string = 'soares';
+
   atualizaDiscussao(evento: MouseEvent) {
     evento.preventDefault();
 
     if (this.statusTopico == 0) this.statusTopico = 1;
-    else if (this.statusTopico == 1) this.statusTopico = 2;
-    else if (this.statusTopico == 2) this.statusTopico = 1;
+    else if (this.statusTopico == 1) {
+      this.statusTopico = 2;
+
+      this.discussaoAssunto = this.discussaoAssuntoTemp;
+      this.discussaoConteudo = this.discussaoConteudoTemp;
+    } else if (this.statusTopico == 2) this.statusTopico = 1;
   }
 
   constructor() {}

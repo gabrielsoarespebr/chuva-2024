@@ -193,6 +193,7 @@
             type="text"
             placeholder="Defina um tópico sucinto para notificar os autores..."
             required
+            [(ngModel)]="discussaoAssuntoTemp"
           />
           <label for="discussaoConteudo" class="textoCorPrincipal negrito"
             >Conteúdo</label
@@ -202,6 +203,7 @@
             name="discussaoConteudo"
             rows="4"
             required
+            [(ngModel)]="discussaoConteudoTemp"
           ></textarea>
 
           <div>
@@ -241,6 +243,20 @@
         >
           <i class="fa-solid fa-plus"></i>criar novo tópico
         </button>
+
+        <div id="aguardandoFeedbackDiscussao">
+          <p class="textoCorPrincipal negrito">{{ discussaoAssunto }}</p>
+          <p class="negrito">{{ usuarioEmail }}</p>
+          <p>
+            {{ discussaoConteudo }}
+          </p>
+        </div>
+
+        <div id="aguardandoFeedbackMensagem">
+          <i class="fa-solid fa-check-double"></i>
+          <p class="negrito">Aguardando feedback dos autores</p>
+          <button class="textoCorPrincipal">Editar tópico</button>
+        </div>
       </div>
       <!-- fim enviaDiscussao -->
 

@@ -229,14 +229,14 @@ main {
   }
 }
 
-#enviaDiscussao > div {
+#enviaDiscussao > div:first-of-type {
   display: flex;
   flex-direction: column;
   gap: 2vh;
 
   margin-bottom: 3vh;
 
-  &>p:last-of-type{
+  & > p:last-of-type {
     width: 70%;
 
     margin: auto;
@@ -270,7 +270,8 @@ main {
   }
 }
 
-.answered-topic {
+.answered-topic,
+#aguardandoFeedbackDiscussao {
   box-shadow: 0 0 10px var(--corSombra);
 
   margin-top: 2vh;
@@ -309,6 +310,34 @@ main {
     & > p {
       color: var(--corReferencia);
     }
+  }
+}
+
+#aguardandoFeedbackDiscussao {
+  margin: 0;
+
+  & > * {
+    filter: blur(2px);
+  }
+}
+
+#aguardandoFeedbackMensagem {
+  margin: auto;
+  margin-top: -12vh;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+
+  & > button {
+    cursor: pointer;
+
+    background: none transparent;
+    border: none;
+
+    text-decoration: underline;
   }
 }
 
